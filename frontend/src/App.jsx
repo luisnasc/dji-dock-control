@@ -249,7 +249,7 @@ function App() {
           </div>
 
           {/* MISSIONS SECTION */}
-          <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-6 shadow-[0_40px_120px_-80px_rgba(15,23,42,0.8)]">
+          <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-6 shadow-[0_40px_120px_-80px_rgba(15,23,42,0.8)] flex h-full min-h-[48vh] max-h-[75vh] flex-col overflow-hidden">
             <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
               <div>
                 <h3 className="text-xl font-semibold text-white">Missões</h3>
@@ -277,12 +277,12 @@ function App() {
               ))}
             </div>
 
-            {/* MISSIONS TABLE */}
-            <div className="space-y-3">
-              {loading.missions ? (
-                <div className="py-8 text-center text-slate-300">Carregando missions...</div>
-              ) : filteredMissions.length ? (
-                filteredMissions.map((mission) => {
+            <div className="flex-1 min-h-0 overflow-hidden rounded-3xl border border-white/10 bg-slate-950/70">
+              <div className="h-full min-h-0 overflow-y-auto p-4 pr-2 space-y-3 scrollbar-thin scrollbar-thumb-slate-700/60 scrollbar-track-slate-900/40">
+                {loading.missions ? (
+                  <div className="py-8 text-center text-slate-300">Carregando missions...</div>
+                ) : filteredMissions.length ? (
+                  filteredMissions.map((mission) => {
                   const currentStatus = missionStatus[mission.id] ?? mission.status;
                   return (
                     <div
@@ -386,6 +386,7 @@ function App() {
                 </div>
               )}
             </div>
+          </div>
 
             {/* SUMMARY STATS */}
             {filteredMissions.length > 0 && (
