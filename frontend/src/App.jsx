@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import disjuntoresImg from "./assets/missions/disjuntores.jpeg";
 import seccionadorasImg from "./assets/missions/seccionadoras.jpg";
 import transformadoresImg from "./assets/missions/transformadores.jpeg";
-import dock2Img from "./assets/docks/dock3.jpeg";
+import dock2Img from "./assets/docks/dock2.jpeg";
 import dock3Img from "./assets/docks/dock3.jpeg";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
