@@ -1,0 +1,18 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linhaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#linhaGrad)"/>
+  <!-- Power lines -->
+  <line x1="50" y1="100" x2="350" y2="100" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="50" y1="150" x2="350" y2="150" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="50" y1="200" x2="350" y2="200" stroke="#fbbf24" stroke-width="3"/>
+  <!-- Towers -->
+  <polygon points="100,80 110,150 90,150" fill="#64748b"/>
+  <polygon points="200,80 210,150 190,150" fill="#64748b"/>
+  <polygon points="300,80 310,150 290,150" fill="#64748b"/>
+  <text x="200" y="260" font-size="20" fill="#60a5fa" text-anchor="middle" font-family="system-ui">Linha 01</text>
+</svg>
