@@ -5,16 +5,14 @@ from app.routes.docks import router as docks_router
 from app.routes.missions import router as missions_router
 from app.routes.execute import router as execute_router
 
+from app.services.dji_service import FlightHubClient
+
 app = FastAPI()
 
 app.include_router(projects_router)
 app.include_router(docks_router)
 app.include_router(missions_router)
 app.include_router(execute_router)
-
-#incluir CORS middleware para permitir requisições de qualquer origem
-#incluir os imports necessários para os routers de docks, missions e execute
-
 
 
 app.add_middleware(
@@ -25,3 +23,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+client = FlightHubClient()
+@app.get("/test-flighthub")
+def test_flighthub():
+    return client.test_connection()
+
+
+@app.get("/")
+def root():
+    return {"message": "API funcionando"}
