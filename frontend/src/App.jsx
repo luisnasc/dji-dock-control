@@ -7,7 +7,10 @@ import dock3Img from "./assets/docks/dock3.jpeg";
 import { api } from "./services/api";
 import Sidebar from "./components/Sidebar";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+//const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "https://dji-dock-control-ws.onrender.com";
+
+
 
 const statusStyles = {
   Salva: "bg-yellow-500/20 text-yellow-300",
